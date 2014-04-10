@@ -15,5 +15,5 @@
 /log/*.log
 /tmp
 .bundle
-config/database.yml
+#config/database.yml
 public/uploads
