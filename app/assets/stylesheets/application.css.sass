@@ -1,0 +1,165 @@
+@import "bootstrap"
+
+@mixin main_sections
+  padding-top: 75px
+  margin: 0 auto
+  color: white
+  padding: 100px
+  border-bottom: 1px solid #c8c8c8
+
+@mixin border-rad($size)
+  border-radius: $size
+  -moz-border-radius: $size
+  -webkit-border-radius: $size
+  -webkit-border-radius: $size
+
+@mixin font_family
+  font-family: 'Oxygen', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'
+  color: #454545
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen)
+  
+
+  
+
+body
+  @include font_family
+
+#dark-background
+  background-color: #868686
+  
+
+.container
+  width: 1238px
+  #outer_layout
+    width: 100%
+    float: left
+    #wrapper
+      width: 1238px
+      margin: 0 auto
+      #inner_wrapper
+        width: 1238px
+        float: left
+        background: white
+        box-shadow: 0px 0px 50px rgba(0,0,0,0.5)
+        .navbar
+          border-bottom: 1px solid #c8c8c8
+          box-shadow: 0px 0px 5px rgba(0,0,0,0.25)
+          margin-bottom: 0px
+          position: fixed
+          top: 0
+          width: 1238px
+          .navbar-inner
+            border: 0px
+            #logo
+              img
+                float: left
+                width: 160px
+            .nav
+              float: right
+              padding-top: 5px
+.welcome-box
+  padding-top: 75px
+  width: 350px
+  margin: 0 auto
+  color: white
+  background: rgba(126, 126, 126, 0.2)
+  padding: 100px
+  @include border-rad(25px)
+  .head
+    font-size: 40px
+    text-align: center
+  .welcome-message
+    width: 284px
+
+
+#inner_wrapper
+  .video
+    @include main_sections
+    .video_wrapper
+      width: 800px
+      float: center
+      margin: 0 auto
+  .about
+    @include main_sections
+    color: #757777
+    background: rgb(190, 245, 255)
+    span.sidekick
+      color: #f89406
+    .details
+      font-size: 18px
+    .about-wrapper
+      width: 800px
+      float: center
+      margin: 0 auto
+      padding: 33px
+      background: white
+      @include border-rad(10px)
+    
+  .photo
+    @include main_sections
+
+input[type="submit"]
+  background: blue
+    
+.hero-unit
+  background-image: url("#{running_path}.jpg")
+  background-repeat: no-repeat
+  height: 500px
+  padding-top: 100px
+  @include border-rad(0px)
+  label
+    float: left
+    padding-right: 10px
+  input
+    background-color: #e9e9e9
+    border: none
+    color: #525252
+    display: block
+    float: left
+    @include font_family
+    font-size: 18px
+    font-weight: 300
+    line-height: 41px
+    padding: 0 10px 0 10px
+    height: 39px
+    width: 261px
+    margin-right: 10px
+
+form
+  .btn-large
+    padding: 9px
+
+.photo
+  padding: 0px !important
+  .third-photo
+    background-image: url("#{homegrown}.jpg")
+    background-repeat: no-repeat
+    height: 810px
+    @include border-rad(0px)
+
+@mixin small_pages
+  width: 800px
+  margin: 0 auto
+  float: center
+  padding-top: 80px
+  padding-bottom: 100px
+#about-page-wrapper 
+  @include small_pages
+  h4.you
+    padding-top: 30px
+#contact-us-page-wrapper
+  @include small_pages
+  #contact_email
+    height: 30px  
+    width: 300px
+    font-size: 18px
+  #contact_detail
+    width: 500px
+    font-size: 18px
+#privacy-policy-page-wrapper
+  @include small_pages
+
+.page-body
+  height: 100%
+

@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Email:
+  = @early_user.email
+
+= link_to 'Edit', edit_early_user_path(@early_user)
+\|
+= link_to 'Back', early_users_path

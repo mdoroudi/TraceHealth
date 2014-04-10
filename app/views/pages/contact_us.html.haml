@@ -1,0 +1,19 @@
+#contact-us-page-wrapper.page-body
+  %h3 Contact Us
+  %br
+  = form_tag(submit_contact_path,  :method=>'post') do 
+    %p
+      = label_tag(:contact_detail, "Your Email")
+    %p
+      = email_field_tag(:contact_email, nil, :autocomplete => true) 
+    %p
+      = label_tag(:contact_detail, "Details")
+    %p 
+      = text_area_tag(:contact_detail,:"", :size=> "66x8")
+    %p
+      = submit_tag("Submit", :class => "btn btn-warning", :disabled => false)
+      
+      
+      
+      
+

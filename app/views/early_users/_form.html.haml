@@ -1,0 +1,16 @@
+.welcome-box
+  .welcome-message
+    %p.head Welcome!
+    %p Be the first to know about us!
+  = form_for @early_user do |f|
+    - if @early_user.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@early_user.errors.count, "error")} prohibited this early_user from being saved:"
+        %ul
+          - @early_user.errors.full_messages.each do |msg|
+            %li= msg
+
+    .field
+      = f.text_field :email, placeholder: 'Your email'
+    .actions
+      = f.button 'Submit', type: 'submit', class: 'btn btn-warning btn-large'
